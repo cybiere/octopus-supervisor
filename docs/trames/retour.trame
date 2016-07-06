@@ -1,0 +1,12 @@
+
+< LO_BRAIN
+> LO_TENTACLE
+< ID:#id
+> KEY:#key
+< RET:#outFile
+> OK
+<
+< [DATA]
+<
+< EOF
+> OK_EOF

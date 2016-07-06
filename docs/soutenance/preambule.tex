@@ -1,0 +1,38 @@
+\documentclass[handout]{beamer}
+
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{minted}
+
+\newlength{\wideitemsep}
+\setlength{\wideitemsep}{2\itemsep}
+\let\olditem\item
+\renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
+
+\definecolor{vert}{HTML}{006020}
+\definecolor{bleu}{HTML}{0020A0}
+\definecolor{rouge}{HTML}{A02020}
+\definecolor{orange}{HTML}{C06000}
+
+
+%\hypersetup{pdfpagemode=FullScreen}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{\secname}
+  \tableofcontents[currentsection,hideothersubsections]
+  \end{frame}
+}
+
+\input{beamertheme}
+
+\title{Soutenance de projet - Octopus Supervisor}
+\author[Cosnard - Segretain]{Nicolas Cosnard\\
+Cyril Segretain\\
+~~\\
+Tuteurs : Jeremy Briffaut et Martial Szpieg}
+\institute{INSA Centre-Val de Loire}
+\date{12 Février 2015}

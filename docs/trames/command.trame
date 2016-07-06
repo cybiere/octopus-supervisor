@@ -1,0 +1,11 @@
+
+
+> LO_TENTACLE
+< LO_BRAIN
+> GIVE_ID
+< ID:#tentacleId
+> KEY:#key
+< OK_KEY
+> RUN:#scriptId
+< RUNNING:#scriptId
+

@@ -1,0 +1,1 @@
+int saveRapports(int port, int listenPipe[2], int speakPipe[2]);

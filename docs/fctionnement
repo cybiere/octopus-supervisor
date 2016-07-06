@@ -1,0 +1,47 @@
+Test fonctionnement :
+
+1. Lancement du serveur brain : écoute sur 3 ports : 8080 (serveur web, controle) 6000 (register nex tentacle) 6001 (reception retour script)
+2. Lancement tentacle avec param IP brain => sur port 6000
+3. Enregistrement automatique du tentacle sur le brain
+	> Authentification via 2 valeurs, une donnée par le tentacle et une par le brain
+	> LO_BRAIN 
+	> LO_TENTACLE
+	> PLS_REG
+	> Le brain envoi un ID au Tentacle
+	> OK + ID + hostname
+	> OK + Hostname (confirmation hostname)
+	> KEY par le Tentacle au Brain
+	> OK + KEY
+	Done
+4. Fermeture de la connexion Brain/Tentacle
+5. Le tentacle se met a écouter sur le port 7001 pour recevoir les commandes
+6. Le brain envoie un msg en interne au maestro pour enregistrer le nouveau tentacle dans la BDD
+7. Envoi d'une commande (port 7001)
+
+/* TODO : Vérifier que la commande vienne bien de l'IP du brain */
+
+	> brain se connecte au tentacle
+	> LO_TENTACLE
+	> LO_BRAIN
+	> GIVE_ID
+	> ID
+	> KEY 
+	> KEY_OK
+	> xUN (RUN) + script a exec (listscripts)
+	> RUNNINGSCRIPT + fin de connexion avec le Brain
+	>> Le tentacle fork et fait tourner le script en tache de fond
+	>> Fichier de sortie du script pour avoir un résult
+
+/* TODO mettre le jour a 2 chiffres sur le fichier de sortie */
+
+	>> Le tentacle a contacté le brain sur le port 6001
+	> LO_BRAIN
+	> LO_TENTACLE
+	> ...
+	> double authentification
+	> ...
+	> Le tentacle donne le nom du fichier
+	> Le tentacle envoi le contenu du fichier de sortie du script
+	> Exit de la connexion
+
+

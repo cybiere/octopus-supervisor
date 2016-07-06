@@ -1,0 +1,21 @@
+
+Brain starting
+
+> LO_TENTACLE
+< LO_BRAIN
+> ID:#tentacleId
+< OK:#tentacleId:HOSTNAME:#hostname
+> OK:#hostname
+< KEY:#key
+> OK:#key
+
+Tentacle starting
+
+< LO_BRAIN
+> LO_TENTACLE
+< PLS_REG
+> ID:#tentacleId
+< OK:#tentacleId:HOSTNAME:#hostname
+> OK:#hostname
+< KEY:#key
+> OK:#key

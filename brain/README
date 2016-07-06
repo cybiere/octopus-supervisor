@@ -1,0 +1,28 @@
+/****************************************************************
+*	Octopus Supervisor					*
+*	Written and owned by Nicolas Cosnard and Cyril Segretain*
+****************************************************************/
+
+What you need before installing Octopus Supervisor is :
+	- gcc
+	- make
+	- libssl-dev
+	- libsqlite3-dev
+
+Use "sudo apt-get install gcc make libssl-dev libsqlite3-dev" 
+if packages are missing.
+
+How to install Octopus Supervisor ?
+	> First, you need to get the package for the server or the client.
+	> Second, go into the Octopus directory.
+	> Then, use the command "make" to compile the software.
+	> The last part is to use "make install" in root mode to install 
+	files in your system.
+	
+How to launch Octopus Supervisor ?
+	> You need to be root.
+	> Use "octoBrain" for the server and "octoTentacle" for the client.
+	> If you want that the client connect itself to the server, use the 
+	option "-b [ip server]" with the server IP.
+	> If you want to have logs on STDOUT and debug logs, use the option 
+	"--no-daemon".
